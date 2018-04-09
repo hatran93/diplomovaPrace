@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20180409 16:16:23.884" generator="Robot 3.0.3.dev20170213 (Python 2.7.13 on win32)">
+<suite source="C:\Users\tes-nb-023\Documents\diplomovaPrace\Tests\TC01_registrace_noveho_uzivatele.robot" id="s1" name="TC01 registrace noveho uzivatele">
+<test id="s1-t1" name="Registrace noveho uzivatele">
+<kw name="Otevreni Alza" library="keywords">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+</arguments>
+<msg timestamp="20180409 16:16:24.149" level="INFO">Opening browser 'chrome' to base url 'https://www.alza.cz/'.</msg>
+<status status="PASS" endtime="20180409 16:16:32.999" starttime="20180409 16:16:24.149"></status>
+</kw>
+<status status="PASS" endtime="20180409 16:16:32.999" starttime="20180409 16:16:24.149"></status>
+</kw>
+<status status="PASS" endtime="20180409 16:16:33.011" critical="yes" starttime="20180409 16:16:24.148"></status>
+</test>
+<doc>Test pro registraci noveho uzivatele
+Je potreba validnich udaju</doc>
+<metadata>
+<item name="Autor">Tran Dac Ha</item>
+<item name="Verze">1.0</item>
+</metadata>
+<status status="PASS" endtime="20180409 16:16:33.016" starttime="20180409 16:16:23.890"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="0" pass="1">Critical Tests</stat>
+<stat fail="0" pass="1">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="0" id="s1" name="TC01 registrace noveho uzivatele" pass="1">TC01 registrace noveho uzivatele</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
