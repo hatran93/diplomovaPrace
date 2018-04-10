@@ -15,12 +15,8 @@ Test Teardown   Zavreni stranky Alza
 
 *** Test Cases ***
 Registrace noveho uzivatele
+    [Tags]  iterace-1
     Kliknuti na prihlasit
     Kliknuti na Nova registrace
     Vlozeni povinnych udaju pri registraci    ${email}    ${heslo}    ${telefon}
-
-*** Variables ***
-${email}        robottest5@email.cz
-${heslo}        RFtest1234
-${telefon}      123456789
 
