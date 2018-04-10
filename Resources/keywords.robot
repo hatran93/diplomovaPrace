@@ -139,9 +139,3 @@ Zkontrolovani spravne ceny
 Kliknuti na odebrani zbozi z kosiku
     click element   ${odebraniZbozi}
     wait until element is visible   ${prazdnyKosik}
-
-
-
-
-
-

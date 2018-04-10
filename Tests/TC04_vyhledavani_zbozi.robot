@@ -13,5 +13,3 @@ Test Teardown   Zavreni stranky Alza
 Vyhledavani zbozi
     [Tags]  smoke
     Vyhledani zbozi  apple
-
-*** Variables ***

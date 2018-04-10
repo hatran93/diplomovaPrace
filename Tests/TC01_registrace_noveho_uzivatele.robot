@@ -12,11 +12,9 @@ Resource  ../Resources/keywords.robot
 Test Setup      Otevreni stranky Alza
 Test Teardown   Zavreni stranky Alza
 
-
 *** Test Cases ***
 Registrace noveho uzivatele
     [Tags]  iterace-1
     Kliknuti na prihlasit
     Kliknuti na Nova registrace
     Vlozeni povinnych udaju pri registraci    ${email}    ${heslo}    ${telefon}
-
