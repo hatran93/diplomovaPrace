@@ -1,20 +1,158 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generated="20180409 16:16:23.884" generator="Robot 3.0.3.dev20170213 (Python 2.7.13 on win32)">
-<suite source="C:\Users\tes-nb-023\Documents\diplomovaPrace\Tests\TC01_registrace_noveho_uzivatele.robot" id="s1" name="TC01 registrace noveho uzivatele">
+<robot generated="20180410 00:38:58.642" generator="Robot 3.0.2 (Python 2.7.13 on darwin)">
+<suite source="/Users/hatran/diplomovaPrace/Tests/TC01_registrace_noveho_uzivatele.robot" id="s1" name="TC01 registrace noveho uzivatele">
 <test id="s1-t1" name="Registrace noveho uzivatele">
-<kw name="Otevreni Alza" library="keywords">
-<kw name="Open Browser" library="SeleniumLibrary">
-<doc>Opens a new browser instance to the given ``url``.</doc>
+<kw name="Otevreni stranky Alza" library="keywords">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to given URL.</doc>
 <arguments>
-<arg>${url}</arg>
-<arg>${browser}</arg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
 </arguments>
-<msg timestamp="20180409 16:16:24.149" level="INFO">Opening browser 'chrome' to base url 'https://www.alza.cz/'.</msg>
-<status status="PASS" endtime="20180409 16:16:32.999" starttime="20180409 16:16:24.149"></status>
+<msg timestamp="20180410 00:38:58.759" level="INFO">Opening browser 'chrome' to base url 'https://www.alza.cz/'</msg>
+<status status="PASS" endtime="20180410 00:39:02.411" starttime="20180410 00:38:58.758"></status>
 </kw>
-<status status="PASS" endtime="20180409 16:16:32.999" starttime="20180409 16:16:24.149"></status>
+<kw name="Get Title" library="Selenium2Library">
+<doc>Returns title of current page.</doc>
+<assign>
+<var>${titulek}</var>
+</assign>
+<msg timestamp="20180410 00:39:02.425" level="INFO">${titulek} = Alza.cz - největší obchod s počítači a elektronikou | Alza.cz</msg>
+<status status="PASS" endtime="20180410 00:39:02.425" starttime="20180410 00:39:02.412"></status>
 </kw>
-<status status="PASS" endtime="20180409 16:16:33.011" critical="yes" starttime="20180409 16:16:24.148"></status>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${titulek}</arg>
+<arg>Alza.cz - největší obchod s počítači a elektronikou | Alza.cz</arg>
+</arguments>
+<status status="PASS" endtime="20180410 00:39:02.426" starttime="20180410 00:39:02.425"></status>
+</kw>
+<status status="PASS" endtime="20180410 00:39:02.426" starttime="20180410 00:38:58.758"></status>
+</kw>
+<kw name="Kliknuti na prihlasit" library="keywords">
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${prihlasitOdkaz}</arg>
+</arguments>
+<msg timestamp="20180410 00:39:02.428" level="INFO">Clicking element 'id=lblLogin'.</msg>
+<status status="PASS" endtime="20180410 00:39:02.588" starttime="20180410 00:39:02.427"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>${prihlasovaciOkno}</arg>
+</arguments>
+<status status="PASS" endtime="20180410 00:39:02.626" starttime="20180410 00:39:02.588"></status>
+</kw>
+<status status="PASS" endtime="20180410 00:39:02.626" starttime="20180410 00:39:02.427"></status>
+</kw>
+<kw name="Kliknuti na Nova registrace" library="keywords">
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${novaRegistraceOdkaz}</arg>
+</arguments>
+<msg timestamp="20180410 00:39:02.627" level="INFO">Clicking element '//div[@id='alzaDialog']//a[@class='reg']'.</msg>
+<status status="PASS" endtime="20180410 00:39:03.823" starttime="20180410 00:39:02.627"></status>
+</kw>
+<kw name="Get Location" library="Selenium2Library">
+<doc>Returns the current location.</doc>
+<assign>
+<var>${aktualniURL}</var>
+</assign>
+<msg timestamp="20180410 00:39:03.828" level="INFO">${aktualniURL} = https://www.alza.cz/Registration.htm</msg>
+<status status="PASS" endtime="20180410 00:39:03.828" starttime="20180410 00:39:03.823"></status>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${aktualniURL}</arg>
+<arg>https://www.alza.cz/Registration.htm</arg>
+</arguments>
+<status status="PASS" endtime="20180410 00:39:03.828" starttime="20180410 00:39:03.828"></status>
+</kw>
+<status status="PASS" endtime="20180410 00:39:03.828" starttime="20180410 00:39:02.626"></status>
+</kw>
+<kw name="Vlozeni povinnych udaju pri registraci" library="keywords">
+<arguments>
+<arg>${email}</arg>
+<arg>${heslo}</arg>
+<arg>${telefon}</arg>
+</arguments>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${emailRegistrace}</arg>
+<arg>${email}</arg>
+</arguments>
+<msg timestamp="20180410 00:39:03.829" level="INFO">Typing text 'robottest5@email.cz' into text field 'id=edth1EmailLogin'</msg>
+<status status="PASS" endtime="20180410 00:39:04.380" starttime="20180410 00:39:03.829"></status>
+</kw>
+<kw name="Input Password" library="Selenium2Library">
+<doc>Types the given password into text field identified by `locator`.</doc>
+<arguments>
+<arg>${hesloRegistrace}</arg>
+<arg>${heslo}</arg>
+</arguments>
+<msg timestamp="20180410 00:39:04.381" level="INFO">Typing password into text field 'id=edth1Password'</msg>
+<status status="PASS" endtime="20180410 00:39:04.819" starttime="20180410 00:39:04.380"></status>
+</kw>
+<kw name="Input Password" library="Selenium2Library">
+<doc>Types the given password into text field identified by `locator`.</doc>
+<arguments>
+<arg>${potvrzeniHeslaRegistrace}</arg>
+<arg>${heslo}</arg>
+</arguments>
+<msg timestamp="20180410 00:39:04.820" level="INFO">Typing password into text field 'id=edth1PasswordConfirm'</msg>
+<status status="PASS" endtime="20180410 00:39:05.527" starttime="20180410 00:39:04.819"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${telefonRegistrace}</arg>
+<arg>${telefon}</arg>
+</arguments>
+<msg timestamp="20180410 00:39:05.528" level="INFO">Typing text '123456789' into text field 'id=edth2Phone'</msg>
+<status status="PASS" endtime="20180410 00:39:05.724" starttime="20180410 00:39:05.527"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${ulozitRegistraci}</arg>
+</arguments>
+<msg timestamp="20180410 00:39:05.725" level="INFO">Clicking element '//div[@class='obuttons inner']/a'.</msg>
+<status status="PASS" endtime="20180410 00:39:07.140" starttime="20180410 00:39:05.724"></status>
+</kw>
+<kw name="Zkontrolovani ze je uzivatel prihlasen" library="keywords">
+<arguments>
+<arg>${email}</arg>
+</arguments>
+<kw name="Get Text" library="Selenium2Library">
+<doc>Returns the text value of element identified by `locator`.</doc>
+<arguments>
+<arg>${mojeAlza}</arg>
+</arguments>
+<assign>
+<var>${textMojeAlza}</var>
+</assign>
+<msg timestamp="20180410 00:39:07.170" level="INFO">${textMojeAlza} = Moje Alza - robottest5@email.cz</msg>
+<status status="PASS" endtime="20180410 00:39:07.170" starttime="20180410 00:39:07.140"></status>
+</kw>
+<kw name="Should End With" library="BuiltIn">
+<doc>Fails if the string ``str1`` does not end with the string ``str2``.</doc>
+<arguments>
+<arg>${textMojeAlza}</arg>
+<arg>${email}</arg>
+</arguments>
+<status status="PASS" endtime="20180410 00:39:07.171" starttime="20180410 00:39:07.171"></status>
+</kw>
+<status status="PASS" endtime="20180410 00:39:07.171" starttime="20180410 00:39:07.140"></status>
+</kw>
+<status status="PASS" endtime="20180410 00:39:07.171" starttime="20180410 00:39:03.829"></status>
+</kw>
+<status status="PASS" endtime="20180410 00:39:07.171" critical="yes" starttime="20180410 00:38:58.757"></status>
 </test>
 <doc>Test pro registraci noveho uzivatele
 Je potreba validnich udaju</doc>
@@ -22,7 +160,7 @@ Je potreba validnich udaju</doc>
 <item name="Autor">Tran Dac Ha</item>
 <item name="Verze">1.0</item>
 </metadata>
-<status status="PASS" endtime="20180409 16:16:33.016" starttime="20180409 16:16:23.890"></status>
+<status status="PASS" endtime="20180410 00:39:07.173" starttime="20180410 00:38:58.645"></status>
 </suite>
 <statistics>
 <total>

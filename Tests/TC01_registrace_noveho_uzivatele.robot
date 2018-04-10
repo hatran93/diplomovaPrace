@@ -9,6 +9,18 @@ Resource  ../Resources/keywords.robot
 
 # robot -d Results/TC01_registrace_noveho_uzivatele Tests/TC01_registrace_noveho_uzivatele.robot
 
+Test Setup      Otevreni stranky Alza
+Test Teardown   Zavreni stranky Alza
+
+
 *** Test Cases ***
 Registrace noveho uzivatele
-    otevreni alza
+    Kliknuti na prihlasit
+    Kliknuti na Nova registrace
+    Vlozeni povinnych udaju pri registraci    ${email}    ${heslo}    ${telefon}
+
+*** Variables ***
+${email}        robottest5@email.cz
+${heslo}        RFtest1234
+${telefon}      123456789
+
