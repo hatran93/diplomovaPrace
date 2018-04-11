@@ -1,6 +1,8 @@
 *** Settings ***
 Documentation   Test pro registraci noveho uzivatele
-...             Je potreba validnich udaju
+...             Je doporuceno zmenit pouze promennou ${email}
+...             v souboru variables a inkrementovat hondnoty,
+...             napr. robottest20@email.cz
 
 Metadata        Autor   Tran Dac Ha
 Metadata        Verze   1.0
