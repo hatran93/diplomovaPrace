@@ -1,7 +1,7 @@
 *** Settings ***
 Documentation   Test pro registraci noveho uzivatele
 ...             Je doporuceno zmenit pouze promennou ${email}
-...             v souboru variables a inkrementovat hondnoty,
+...             v souboru variables a inkrementovat hodnoty,
 ...             napr. robottest20@email.cz
 
 Metadata        Autor   Tran Dac Ha
