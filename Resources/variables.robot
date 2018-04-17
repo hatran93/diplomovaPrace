@@ -7,7 +7,7 @@ ${btnPokracovatVyberDopravy}    //a[contains(@class,'order2')]
 ${btnPotvrzeniVyberuDopravy}    //div[@class='dialogButtons']/a[contains(@class,'confirmDialog')]
 ${emailPrihlasovani}            id=i_name
 ${emailRegistrace}              id=edth1EmailLogin
-${email}                        robottest@email.cz
+${email}                        robottest17@email.cz
 ${hesloPrihlasovani}            id=i_psw
 ${hesloRegistrace}              id=edth1Password
 ${heslo}                        RFtest1234

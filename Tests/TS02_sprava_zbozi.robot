@@ -1,17 +1,24 @@
 *** Settings ***
-Documentation   Test pro cely proces objednavky zbozi
+Documentation   Testy pro spravu zbozi - vyhledavani
+...             a test pro cely proces objednavky zbozi
 
 Metadata        Autor   Tran Dac Ha
 Metadata        Verze   1.0
 
-Resource  ../Resources/keywords.robot
+Resource  ../Resources/common.robot
+Resource  ../Resources/spravaZbozi.robot
+Resource  ../Resources/spravaUzivatele.robot
 
-# robot -d Results/TC03_objednavka_zbozi Tests/TC03_objednavka_zbozi.robot
+# robot -d Results/TS02_sprava_zbozi Tests/TS02_sprava_zbozi.robot
 
 Test Setup      Otevreni stranky Alza
 Test Teardown   Zavreni stranky Alza
 
 *** Test Cases ***
+Vyhledavani zbozi
+    [Tags]  smoke
+    Vyhledani zbozi  sluchatka
+
 Objednavka zbozi
     [Tags]  smoke
     Kliknuti na prihlasit
